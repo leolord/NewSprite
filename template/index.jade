@@ -1,0 +1,66 @@
+extends layout/pc.jade
+
+block vars
+  - var page = {}
+  - page.title    = 'Sprite Tool'
+  - page.desc     = 'A Offline Page to generate sprite image.'
+  - page.keywords = 'css sprite tool'
+  - page.author   = '吴建涛(fortomorrow@163.com)'
+  - page.name     = 'index'
+
+block main
+  #main.main
+    h1 Sprite Tool
+    form.configuration
+
+      fieldset.configuration-unit
+        .input-row
+          label(for="J_unit_px") 单位：
+          input#J_unit_px(type="radio",name="unit",checked=true,value="px")
+          span.radio-input-name px
+          input#J_unit_rem(type="radio",name="unit",value="rem")
+          span.radio-input-name rem
+
+      fieldset.configuration-screen
+        .input-row
+          label(for="J_screen_width") 屏幕宽度:
+          input#J_screen_width(type="number", name="screenWidth", value="640", min="300")
+          label(for="J_screen_grid") 栅格数量:
+          input#J_screen_grid(type="number", name="screenGrid", value="10", min="1")
+
+      fieldset.configuration-grid
+        .input-row
+          label(for="J_gap") 间距(像素):
+          input#J_gap(type="number", value="10", name="gap", min="0")
+          label(for="J_horizontal") 方向:
+          input#J_horizontal(type="radio",checked=true,value="horizontal",name="direction")
+          span.radio-input-name 横向
+          input#J_vertical(type="radio",value="vertical",name="direction")
+          span.radio-input-name 纵向
+          label(for="J_transparent") 背景透明:
+          input#J_transparent(type="checkbox", name="transparent", checked=true)
+          label(for="J_background") 背景色:
+          input#J_background(type="color", name="background")
+
+      fieldset.configuration-class
+        .input-row
+          label(for="J_class") 类名:
+          input#J_class(type="text",value="sprite",name="class")
+          label(for="J_prefix") 前缀:
+          input#J_prefix(type="text",value="",name="prefix")
+          label(for="J_suffix") 后缀:
+          input#J_suffix(type="text",value="",name="suffix")
+
+      .configuration-files
+        .input-row
+          label(for-"J_files") 图片文件:
+          input#J_files(type="file",accept="image/*",multiple=true,name="files")
+
+    .output-area
+      canvas#J_output
+      .hard-reset 强制重排
+      a.download-png 下载png
+      a.download-jpg 下载jpg
+      .tips a. 拖动图像重新排列; b. 修改图像间距之后，强制重排才会生效;<br>c. 双击删除图像; d. 直接拖拽文件到此页面可以快速添加图片。
+
+    pre.css-output-area
