@@ -1,0 +1,82 @@
+{
+  "name": "NewSprite",
+  "version": "0.0.1",
+  "description": "雪碧图制作工具",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "吴建涛",
+  "email": "fortomorrow@163.com",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^5.8.23",
+    "babel-eslint": "^4.1.1",
+    "babel-loader": "^5.3.1",
+    "babel-runtime": "^5.8.20",
+    "bluebird": "^2.9.34",
+    "bundle-loader": "^0.5.4",
+    "css-loader": "^0.17.0",
+    "del": "^2.0.1",
+    "eslint": "^1.3.1",
+    "eslint-loader": "^1.0.0",
+    "eslint-plugin-react": "^3.3.1",
+    "file-loader": "^0.8.1",
+    "find": "^0.2.3",
+    "git-config": "0.0.7",
+    "gulp": "^3.9.0",
+    "gulp-copy": "0.0.2",
+    "gulp-frep": "^0.1.3",
+    "gulp-jade": "^1.1.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-minify-html": "^1.0.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^6.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-sequence": "^0.4.1",
+    "gulp-util": "^3.0.4",
+    "image-webpack-loader": "^1.6.1",
+    "imagemin": "^3.2.0",
+    "inquirer": "^0.9.0",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.7.1",
+    "jquery": "^2.1.4",
+    "node-libs-browser": "^0.5.2",
+    "node-sass": "^3.3.2",
+    "sass-loader": "^2.0.1",
+    "source-map-loader": "^0.1.4",
+    "style-loader": "^0.12.0",
+    "webpack": "^1.12.1",
+    "webpack-dev-server": "^1.8.2",
+    "webpack-stream": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leolord/NewSprite.git"
+  },
+  "keywords": [
+    "雪碧图",
+    "sprite",
+    "css",
+    "rem"
+  ],
+  "path": {
+    "src": "app",
+    "vendor": "vendor",
+    "template": "template",
+    "assets": [
+      "img/*",
+      "img/**/*"
+    ],
+    "globalLibs": [
+      "bower_components/zepto/zepto.min.js"
+    ],
+    "dist": "dist"
+  },
+  "dependencies": {
+    "compass-mixins": "^0.12.7",
+    "lodash": "^3.10.1",
+    "react": "^0.13.3"
+  }
+}

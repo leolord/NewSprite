@@ -1,0 +1,29 @@
+/**
+ * @module index
+ * @author 吴建涛(fortomorrow@163.com)
+ * @date Tue Sep 08 2015 16:02:48 GMT+0800 (CST)
+ * */
+
+@import 'lib/compass';
+
+//REF: https://github.com/AlloyTeam/Mars/blob/master/solutions/font-family.md
+//Only for mobile devices
+body {
+  font-family: "Microsoft Yahei", STHeiti, SimSun;
+}
+
+.drop-over {
+  @include filter(brightness(.4));
+}
+
+a {
+  &,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@import './style/layout';
+@import './style/configuration';
+@import './style/canvas';
+@import './style/css';
