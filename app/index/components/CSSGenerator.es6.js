@@ -17,17 +17,16 @@ export default class CSSGenerator{
 
     let css = [
       '.' + config.className + ' {',
-      '  width:' + unitify(config.totalWidth) + ';',
-      '  height:' + unitify(config.totalHeight) + ';',
-      '  background:url("' + config.data + '");',
+      '  background: url("' + config.data + '") center center no-repeat scroll;',
+      '  background-size: ' + unitify(config.totalWidth) + ' ' + unitify(config.totalHeight) + ';',
       '}'
     ];
 
     for(let f of config.files){
       css.push('.' + config.className + '.' + config.prefix + f.name + config.sufix + ' {');
-      css.push('  width:' + unitify(f.width) + ';');
-      css.push('  height:' + unitify(f.width) + ';');
-      css.push('  background-position:' + unitify(0 - f.x) + ' ' + unitify(0 - f.y) + ';');
+      css.push('  width: ' + unitify(f.width) + ';');
+      css.push('  height: ' + unitify(f.height) + ';');
+      css.push('  background-position: ' + unitify(0 - f.x) + ' ' + unitify(0 - f.y) + ';');
       css.push('}');
     }
 
